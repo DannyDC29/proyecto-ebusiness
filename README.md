@@ -19,12 +19,14 @@ Siga estos pasos en orden para montar el entorno:
 ```bash
 git clone [https://github.com/DannyDC29/proyecto-ebusiness.git](https://github.com/DannyDC29/proyecto-ebusiness.git)
 cd proyecto-ebusiness
+```
 
 ### 2. Descargar Binarios e Imágenes de Fabric
 Si no tiene los binarios de Hyperledger Fabric en su equipo, ejecute el script oficial desde la raíz del proyecto:
 
 ```bash
 curl -sSL [https://bit.ly/2ysbOFE](https://bit.ly/2ysbOFE) | bash -s -- 2.5.4 1.5.7
+```
 
 ### 3. Levantar la Red y el Canal
 Navegue a la carpeta de la red de prueba e inicie el canal:
@@ -33,12 +35,14 @@ Navegue a la carpeta de la red de prueba e inicie el canal:
 cd fabric-samples/test-network
 ./network.sh down
 ./network.sh up createChannel -c supplychannel -ca -s couchdb
+```
 
 ### 4. Desplegar el Smart Contract (Chaincode)
 Instale el contrato inteligente encargado de la lógica de trazabilidad:
 
 ```bash
 ./network.sh deployCC -ccn supplycc -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
+```
 
 ### 5. Configurar e Iniciar la API REST
 Navegue a la carpeta de la API, instale las dependencias y ejecute el servidor:
@@ -47,6 +51,7 @@ Navegue a la carpeta de la API, instale las dependencias y ejecute el servidor:
 cd api
 npm install
 node app.js
+```
 
 La API estará disponible en **http://localhost:3000**.
 
@@ -57,6 +62,7 @@ A. Verificar Salud de la Conexión
 
 ```bash
 curl http://localhost:3000/health
+```
 
 B. Registrar un Nuevo Producto (POST)
 
@@ -64,11 +70,13 @@ B. Registrar un Nuevo Producto (POST)
 curl -X POST http://localhost:3000/productos \
   -H "Content-Type: application/json" \
   -d '{"id":"PROD-100","nombre":"Cafe Especial","cantidad":500,"unidad":"kg","origen":"Huila","destino":"Puerto","temperatura":"18C"}'
+```
 
 C. Consultar Historial de Trazabilidad (GET)
 
 ```bash
 curl http://localhost:3000/productos/PROD-100/historial | python3 -m json.tool
+```
 
 ### Estructura del Repositorio
 * **fabric-samples/test-network:** Scripts de despliegue de la red.

@@ -1,0 +1,16 @@
+{
+  "name": "capstone-api",
+  "version": "1.0.0",
+  "description": "API REST para Supply Chain Hyperledger Fabric",
+  "main": "app.js",
+  "scripts": {
+    "org1": "PORT=3000 mspId=Org1MSP app.js",
+    "org2": "PORT=3001 mspId=Org2MSP app.js"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.14",
+    "@hyperledger/fabric-gateway": "^1.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

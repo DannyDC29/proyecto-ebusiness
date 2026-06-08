@@ -18,12 +18,11 @@ sudo usermod -aG docker $USER
 ### B. Instalar Go (Golang)
 
 ```bash
-sudo wget [https://go.dev/dl/go1.21.5.linux-amd64.tar.gz](https://go.dev/dl/go1.21.5.linux-amd64.tar.gz)
+wget https://go.dev/dl/go1.21.5.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 source ~/.bashrc
-
 ```
 
 ### C. Instalar Node.js y npm

@@ -80,8 +80,7 @@ cd fabric-samples/test-network
 Instale el contrato inteligente encargado de la lógica de trazabilidad:
 
 ```bash
-./network.sh deployCC -ccn supplycc -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
-
+./network.sh deployCC -ccn supplycc -ccp ../asset-transfer-basic/chaincode-go/ -ccl go -c supplychannel
 ```
 
 ---

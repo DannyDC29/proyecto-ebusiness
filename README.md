@@ -46,7 +46,7 @@ sudo apt install -y git curl
 ### Paso 1: Clonar el repositorio
 
 ```bash
-git clone [https://github.com/DannyDC29/proyecto-ebusiness.git](https://github.com/DannyDC29/proyecto-ebusiness.git)
+git clone https://github.com/DannyDC29/proyecto-ebusiness.git
 cd proyecto-ebusiness
 
 ```
@@ -56,7 +56,7 @@ cd proyecto-ebusiness
 Esto descargará los ejecutables de Hyperledger Fabric (peer, orderer, etc.) y las imágenes de Docker necesarias:
 
 ```bash
-curl -sSL [https://bit.ly/2ysbOFE](https://bit.ly/2ysbOFE) | bash -s -- 2.5.4 1.5.7
+curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.5.4 1.5.7
 
 ```
 
